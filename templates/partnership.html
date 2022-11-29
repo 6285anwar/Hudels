@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <link rel="icon" href="{% static 'assets/images/HUDELS.png' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title>HUDELS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-digimedia-v3.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+
+    <style>
+        .card {
+            margin: 5px;
+            text-align: center;
+        }
+
+        .loader-bg {
+            position: fixed;
+            z-index: 999999;
+            background: #fff;
+            width: 100%;
+            height: 100%;
+        }
+
+        .loader-p {
+            border: 0 solid transparent;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: calc(50vh - 75px);
+            left: calc(50vw - 75px);
+        }
+
+        .loader-p:before,
+        .loader-p:after {
+            content: '';
+            border: 1em solid #15e38a;
+            border-radius: 50%;
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: loader 2s linear infinite;
+            opacity: 0;
+        }
+
+        .loader-p:before {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes loader {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        .services .icon img {
+            margin-bottom: 10px;
+            max-width: 50px;
+            min-width: 50px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .logo_img {
+                margin-left: -100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <!-- <div class="loader-bg">
+        <div class="loader-p">
+
+        </div>
+    </div> -->
+    <!-- ***** Preloader End ***** -->
+
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="" onclick="return getData()" class="logo">
+                            <img class="logo_img" src="{% static 'assets/images/HUDELS.png' %}" alt=""
+                                style="width:40% ;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="{% url 'hudels' %}">Home</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'about' %}" >About</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'hudels' %}">Services</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'partnership' %}" class="active">Partnership</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'products' %}">Products</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'contact' %}">Contact</a></li>
+                            <li class="scroll-to-section">
+                                <div class="border-first-button"><a href="#contact">Career</a></div>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <div id="contact" class="contact-us section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+
+                        <h4>Our <em>Partnership</em></h4>
+                        <div class="line-dec"></div>
+                    </div>
+                </div>
+                <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
+
+                    <div class="row ">
+
+
+                        <div class="card" style="width: 20rem; padding:10px; ">
+                            <img src="{% static 'assets/images/KEL (1).jpeg' %}" class="card-img-top " alt="..." style="margin-top: 70px;">
+
+                            <div class="card-body">
+
+
+                            </div>
+                            <div class="card-footer">
+                                <h6 class="card-title">Kerala Electrical and Allied Engineering Company</h6>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 20rem; padding:2px;">
+                            <img src="{% static 'assets/images/silk.png' %}" class="card-img-top"
+                                style="margin-top: 70px;" alt="...">
+                            <br>
+                            <br>
+                            <div class="card-body">
+
+
+                            </div>
+                            <div class="card-footer">
+                                <h6 class="card-title">STEEL INDUSTRIALS KERALA LIMITED</h6>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 20rem; padding:2px;">
+                            <img src="{% static 'assets/images/Dnata.jpeg' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+
+
+                            </div>
+                            <div class="card-footer">
+                                <h6 class="card-title">Dnata
+                                    Company</h6>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 20rem; padding:2px;">
+                            <img src="{% static 'assets/images/Tripadvisor-Logo-2020-present.jpeg' %}"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+
+
+                            </div>
+                            <div class="card-footer">
+                                <h6 class="card-title">Tripadvisor
+                                    Company</h6>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 20rem; padding:2px;">
+                            <img src="{% static 'assets/images/bandose.png' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                
+
+                            </div>
+                            <div class="card-footer">
+                                <h6 class="card-title">Bandos Maldives</h6>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 20rem; padding:2px;">
+                            <img src="{% static 'assets/images/PURPLEPALMSLOGOLatest.jpeg' %}" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                            </div>
+                            <div class="card-footer">
+                                <h6 class="card-title">Purple Palms Resort & Spas</h6>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 20rem; padding:2px;">
+                            <img src="{% static 'assets/images/hils.jpeg' %}" class="card-img-top" alt="..." style="height: 180px;">
+                            <div class="card-body">
+                                
+
+                            </div>
+                            <div class="card-footer">
+                                <h6 class="card-title">Hills and Hues </h6>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 20rem; padding:2px;">
+                            <img src="{% static 'assets/images/mountain.png' %}" class="card-img-top" style="height: 180px;"
+                                alt="...">
+                            <div class="card-body">
+                            </div>
+                            <div class="card-footer">
+                                <h6 class="card-title">Mountain Shadows</h6>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 20rem; padding:2px;">
+                            <img src="{% static 'assets/images/mountx.png' %}" class="card-img-top" style="height: 180px;"
+                                alt="...">
+                            <div class="card-body">
+                            </div>
+                            <div class="card-footer">
+                                <h6 class="card-title">Mount Xanadu Resorts</h6>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 20rem; padding:2px;">
+                            <img src="{% static 'assets/images/arooha.webp' %}" class="card-img-top" style="height: 180px;"
+                                alt="...">
+                            <div class="card-body">
+                            </div>
+                            <div class="card-footer">
+                                <h6 class="card-title">Arooha Tour & Travels</h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <p>Copyright © 2022 Hudels Hospitality Services. All Rights Reserved.
+                       <br> <a href="{% url 'privacy' %}">Privacy & Policy</a> | <a href="{% url 'terms' %}">Terms and Conditions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        setTimeout(function () {
+            $('.loader-bg').fadeToggle();
+        }, 3500);
+    </script>
+
+
+    <!-- Scripts -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/animation.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+</body>
+
+</html>

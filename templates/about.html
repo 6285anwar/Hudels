@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <link rel="icon"  href="{% static 'assets/images/HUDELS.png' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title>HUDELS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-digimedia-v3.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+
+    <style>
+        .loader-bg {
+            position: fixed;
+            z-index: 999999;
+            background: #fff;
+            width: 100%;
+            height: 100%;
+        }
+
+        .loader-p {
+            border: 0 solid transparent;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: calc(50vh - 75px);
+            left: calc(50vw - 75px);
+        }
+
+        .loader-p:before,
+        .loader-p:after {
+            content: '';
+            border: 1em solid #15e38a;
+            border-radius: 50%;
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: loader 2s linear infinite;
+            opacity: 0;
+        }
+
+        .loader-p:before {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes loader {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        .services .icon img {
+            margin-bottom: 10px;
+            max-width: 50px;
+            min-width: 50px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .logo_img {
+                margin-left: -100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <!-- <div class="loader-bg">
+        <div class="loader-p">
+
+        </div>
+    </div> -->
+    <!-- ***** Preloader End ***** -->
+
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="" onclick="return getData()" class="logo">
+                            <img class="logo_img" src="{% static 'assets/images/HUDELS.png' %}" alt=""
+                                style="width:40% ;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="{% url 'hudels' %}">Home</a></li>
+                            <li class="scroll-to-section"><a href="#about" class="active">About</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'hudels' %}">Services</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'partnership' %}">Partnership</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'products' %}"  >Products</a></li>
+                            <li class="scroll-to-section"><a href="#contact">Contact</a></li>
+                            <li class="scroll-to-section">
+                                <div class="border-first-button"><a href="">Career</a></div>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+
+
+    <div id="about" class="about section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="about-left-image  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                                <img src="{% static 'about/assets/img/about1.jpeg' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 align-self-center  wow fadeInRight" data-wow-duration="1s"
+                            data-wow-delay="0.5s">
+                            <div class="about-right-content">
+                                <div class="section-heading">
+                                    <h6>About Us</h6>
+                                    <h4>WE HELP TO GROW YOUR BUSSINESS</h4>
+                                    <div class="line-dec"></div>
+                                </div>
+                                <p>Hudels Hospitality Services Pvt Ltd, founded in 2019 and has grown with time. Hudels
+                                    has a diversified culture and is highly Service oriented. We cater in to various
+                                    segments and ensure that we deliver high standards and meet the requirement of each
+                                    client. We believe in strong relationshis and we focus on building healthy
+                                    relationships with our Customers.To make these partnerships with some big names. But this
+                                    has helped us grow in every aspect and each one of them has contributed to
+                                    our success story, may it be big or small. Without these partnerships we
+                                    perhaps may not exist and thus along with our customers we value all of
+                                    these as brands with high regards and would like to Thank each one of them
+                                    for making our journey a successful one till now.</p>
+                                <div class="row">
+                                    <!-- <div class="col-lg-12">
+                                        <div class="border-first-button scroll-to-section">
+                                            <a href="{% url 'about' %}">More</a>
+                                        </div>
+                                    </div> -->
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div id="services" class="services section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+
+                        <h4>Our Best <em>Services</em></h4>
+                        <div class="line-dec"></div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="naccs">
+                        <div class="grid">
+                            <div class="row">
+
+                                <div class="col-lg-12">
+                                    <ul class="nacc">
+                                        <li class="active">
+                                            <div>
+                                                <div class="thumb">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 align-self-center">
+                                                            <div class="left-text">
+                                                                <a href="https://socioconnects.com/">
+                                                                    <h4>socioconnects.com</h4>
+                                                                </a>
+                                                                <p>
+                                                                    By using this service we are also participating in
+                                                                    making your company better. This software allows you
+                                                                    to share with customers how your business is helping
+                                                                    them grow and grow your company.
+                                                                    By using this service you will get the following:</p>
+                                                                <div class="ticks-list"><span><i
+                                                                            class="fa fa-star"></i> Review
+                                                                        Connect</span> <span><i class="fa fa-star"></i>
+                                                                        Inhouse Review Tools</span>
+                                                                    <span><i class="fa fa-star"></i> Self Check In
+                                                                    </span>
+                                                                    <span><i class="fa fa-star"></i> Social Media
+                                                                        Connect</span>
+                                                                    <span><i class="fa fa-star"></i> Booking
+                                                                        Engines</span> <span><i class="fa fa-star"></i>
+                                                                        Branding & Marketing</span>
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 align-self-center">
+                                                            <div class="right-image">
+                                                                <img src="{% static 'about/assets/img/about2.png' %}"
+                                                                    alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="free-quote" class="free-quote">
+        <div class="container">
+           <div class="row">
+            <div class="col-lg-3">
+                <i class="fa fa-paper-plane fa-3x"></i>
+                <br>
+                <h4>PROJECTS</h4>
+                <br>
+                <h5>25</h5>
+            </div>
+            <div class="col-lg-3">
+                <i class="fa fa-users fa-3x"></i>
+                <br>
+                <h4>HAPPY CLIENTS</h4>
+                <br>
+                <h5>400 +</h5>
+            </div>
+            <div class="col-lg-3">
+                <i class="fa fa-coffee fa-3x"></i>
+                <br>
+               <h4>CUP OF TEA</h4>
+               <br>
+                <h5>2200 +</h5>
+            </div>
+            <div class="col-lg-3">
+                <i class="fa fa-slack fa-3x"></i>
+                <br>
+                <h4>CLIENTS SERVED</h4>
+                <br>
+                <h5>200</h5>
+            </div>
+           </div>
+        </div>
+    </div>
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <p>Copyright © 2022 Hudels Hospitality Services. All Rights Reserved.
+                       <br> <a href="{% url 'privacy' %}">Privacy & Policy</a> | <a href="{% url 'terms' %}">Terms and Conditions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        setTimeout(function () {
+            $('.loader-bg').fadeToggle();
+        }, 3500);
+    </script>
+
+
+    <!-- Scripts -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/animation.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+</body>
+
+</html>

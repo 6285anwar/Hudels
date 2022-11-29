@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <link rel="icon" href="{% static 'assets/images/HUDELS.png' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title>HUDELS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-digimedia-v3.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+
+    <style>
+        h6 {
+            font-weight: normal;
+            text-align: justify;
+        }
+
+        .loader-bg {
+            position: fixed;
+            z-index: 999999;
+            background: #fff;
+            width: 100%;
+            height: 100%;
+        }
+
+        .loader-p {
+            border: 0 solid transparent;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: calc(50vh - 75px);
+            left: calc(50vw - 75px);
+        }
+
+        .loader-p:before,
+        .loader-p:after {
+            content: '';
+            border: 1em solid #15e38a;
+            border-radius: 50%;
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: loader 2s linear infinite;
+            opacity: 0;
+        }
+
+        .loader-p:before {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes loader {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        .services .icon img {
+            margin-bottom: 10px;
+            max-width: 50px;
+            min-width: 50px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .logo_img {
+                margin-left: -100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <!-- <div class="loader-bg">
+        <div class="loader-p">
+
+        </div>
+    </div> -->
+    <!-- ***** Preloader End ***** -->
+
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="" onclick="return getData()" class="logo">
+                            <img class="logo_img" src="{% static 'assets/images/HUDELS.png' %}" alt=""
+                                style="width:40% ;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="{% url 'hudels' %}">Home</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'about' %}">About</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'hudels' %}">Services</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'partnership' %}">Partnership</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'products' %}">Products</a></li>
+                            <li class="scroll-to-section"><a href="#contact">Contact</a></li>
+                            <li class="scroll-to-section">
+                                <div class="border-first-button"><a href="">Career</a></div>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+
+
+    <div id="about" class="about section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+
+                        <div class="col-lg-12 align-self-center  wow fadeInUp" data-wow-duration="1s"
+                            data-wow-delay="0.5s">
+                            <div class="about-right-content text-justify">
+                                <div class="section-heading">
+                                    <h6>PRIVACY POLICY</h6>
+                                    <h5>PRIVACY POLICY OF HUDELS FOR ACCESS AND USE OF HUDELS WEBSITE/APP</h5>
+                                    <br>
+                                </div>
+                                <h6> <strong>HUDELS</strong> hereby declares its privacy policy as an electronic record
+                                    in the form of
+                                    electronic contract formed under the Information Technology Act 2000 and
+                                    subsequently amended by Amendment Act, 2008 and Information and Technology Rules
+                                    made thereunder as I.T. Rules 2011 amended subsequently in regard to electronic
+                                    documents/records.</h6>
+                                <br>
+                                <h6><strong>Definitions:</strong></h6>
+                                <br>
+                                <h6>
+
+                                    <strong>We/Us/Our means :</strong> The HUDELS Website, App and it’s all online
+                                    platforms owned and operated by Hudels Hospitality Services Pvt Ltd
+
+                                </h6>
+                                <br>
+                                <h6><strong>You/Your/Yourself means : </strong>
+                                    The Registered Business establishments and customers/buyers with HUDELS website/App.
+
+                                </h6>
+                                <br>
+                                <h6>
+                                    <strong> Service means :</strong>
+                                </h6>
+                                <h6> Website of <a href="www.hudels.com">www.hudels.com</a> and mobile application of
+                                    HUDELS. This
+                                    page informs you of our policies regarding the collection, use, and disclosure of
+                                    personal data when you use our Service and the choices you have associated with that
+                                    data.
+
+                                    We collect and generate various data points about you. Data by which you are
+                                    identified is termed as “Personal Data”. Personal Data means information that is not
+                                    available or accessible in public domain. Your Privacy is of utmost importance to us
+                                    and protection of your Personal Data is a key commitment for us.
+
+                                    We use your data to provide and improve the Service. By using the Service, you agree
+                                    by giving free consent to the collection and use of following information in the
+                                    manner as narrated in accordance with this policy. Unless defined otherwise in this
+                                    Privacy Policy, terms used in this Privacy Policy have the same meanings as in our
+                                    Terms and Conditions mentioned below:
+
+
+                                </h6>
+                                <br>
+                                <h6>
+                                    <strong> Personal Data : </strong>
+                                </h6>
+                                <h6>
+
+                                    While using our Service, we may ask you to provide us with certain personally
+                                    identifiable information that can be used to contact or identify you ("Personal
+                                    Data"). Personally identifiable information may include, but is not limited to:
+                                </h6>
+
+
+
+                                <h6>
+                                    <strong>1 .</strong> Personal details (e.g. name, contact details including,
+                                    address, date of birth,
+                                    documents such as identity card / passport details / Aadhaar details / PAN / Voter
+                                    ID / driving license, GST Certificate, Bank Account Details and/or education
+                                    details) provided by you to us to avail various products/services from us.
+                                </h6>
+
+                                <h6> <strong>2 .</strong> Your details including transaction history, balances, payment
+                                    details, for
+                                    effecting transfer of monies through various payment channels provided by us.</h6>
+
+                                <h6> <strong>3 .</strong> financial details (e.g. billing value, discounts provided
+                                    etc.) needed as part of
+                                    request for some of our products/services;</h6>
+
+                                <h6> <strong>4 .</strong> images of documents/ photos required to avail any of our
+                                    products/services.</h6>
+
+                                <h6> <strong>5 .</strong> voice recordings of our conversations with our customer care
+                                    agent with you to
+                                    address your queries/grievances;</h6>
+
+                                <h6> <strong>6 .</strong> employment details (e.g. occupation, positions held,
+                                    employment history, salary
+                                    and/or benefits) as part of our record retention for credit/various product
+                                    evaluations or required under applicable law including Prevention of Money
+                                    Laundering (Maintenance of Records) Rules, 2005</h6>
+
+                                <h6> <strong>7 .</strong> specimen signature(s) for processing of your instructions
+                                    received by us through
+                                    our various payment and delivery channels;</h6>
+
+                                <h6> <strong>8 .</strong> opinions provided by you to us by way of feedback or responses
+                                    to surveys;</h6>
+
+                                <h6> <strong>9 .</strong> information obtained from your mobile device by way of using
+                                    our app like device
+                                    location, communication information including contacts and call logs, device
+                                    information (including storage, model, mobile network), transactional and
+                                    promotional SMS/app notifications. This Usage Data may include information such as
+                                    your computer's Internet Protocol address (e.g. IP address), browser type, browser
+                                    version, the pages of our Service that you visit, the time and date of your visit,
+                                    the time spent on those pages, unique device identifiers and other diagnostic data.
+
+
+                                </h6>
+                                <br>
+                                <h6>
+                                    <strong>Tracking & Cookies Data</strong>
+                                </h6>
+                                <h6>
+
+
+                                    We use cookies and similar tracking technologies to track the activity on our
+                                    Service and hold certain information.
+
+                                    Cookies are files with small amount of data which may include an anonymous unique
+                                    identifier. Cookies are sent to your browser from a website and stored on your
+                                    device. Tracking technologies also used are beacons, tags, and scripts to collect
+                                    and track information and to improve and analyze our Service.
+
+                                    You can instruct your browser to refuse all cookies or to indicate when a cookie is
+                                    being sent. However, if you do not accept cookies, you may not be able to use some
+                                    portions of our Service.
+
+                                    No Personal Data will be collected via cookies and other tracking technology;
+                                    however, if you previously provided Personal Data, cookies may be tied to such
+                                    information.
+                                </h6>
+                                <br>
+                                <h6>
+                                    <strong>Sharing of your Personal Data</strong>
+                                </h6>
+                                <h6>
+
+
+                                    Any Personal Data that we have access shall never be shared to third party without
+                                    your consent.
+
+                                    In various processes / submission of applications / availment of product/service
+                                    offerings, we even seek your explicit consent to use / share your Personal Data.
+
+                                    In our business and operational processes, we only share the data as the need arises
+                                    for sharing the data to designated personnel or partners or service providers.
+
+                                    We will share your data with competent/ legal/statutory/regulatory agencies /
+                                    authorities or partners/service providers acting on our behalf (as the case may be)
+                                    in following cases:
+                                </h6>
+
+
+                                <h6>
+                                    <strong>1 .</strong> only for enabling the provision of the products/services
+                                    availed by you, strictly on a “need to know” basis and subject to applicable laws.
+                                </h6>
+
+                                <h6> <strong>2 .</strong> it is directed or required by legal/regulatory / statutory /
+                                    governmental authorities under applicable laws/regulations though a legally
+                                    obligated request.</h6>
+
+                                <h6> <strong>3 .</strong> it is required by financial institutions to verify, mitigate
+                                    or prevent fraud or to manage risk or recover funds in accordance with applicable
+                                    laws/regulations.</h6>
+
+                                <br>
+
+                                <h6><strong>Usage of Your Personal Data</strong></h6>
+                                <h6>We use your Personal Data in our business activities for providing our or our
+                                    partners’ products/services and to perform, among other actions, the following:</h6>
+
+
+                                <h6>
+                                    <strong>1 .</strong> to facilitate the transactions or report on these transactions;
+                                </h6>
+
+                                <h6> <strong>2 .</strong> to undertake research and analytics for offering or improving
+                                    our products/services and their security and service quality;</h6>
+
+                                <h6> <strong>3 .</strong> to check and process your requirements submitted to us for
+                                    products/services and/or instructions or requests received from you in respect of
+                                    these products/services;</h6>
+
+                                <h6>
+                                    <strong>4 .</strong> to share with you, updates on changes to the products/services
+                                    and their terms and conditions;
+                                </h6>
+
+                                <h6>
+                                    <strong>5 .</strong> to take up or investigate any complaints/claims/disputes;
+                                </h6>
+                                <h6>
+                                    <strong>6 .</strong> to respond to your queries or feedback submitted by you;
+                                </h6>
+                                <h6>
+                                    <strong>7 .</strong> to verify your identity for us to provide products/services to
+                                    you;
+                                </h6>
+                                <h6>
+                                    <strong>8 .</strong> to carry credit checks, screenings or due diligence checks as
+                                    lawfully required by us;
+                                </h6>
+                                <h6>
+                                    <strong>9 .</strong> to monitor and review products/services from time to time;
+                                </h6>
+                                <h6>
+                                    <strong>10 .</strong> to undertake financial/regulatory/management reporting, and
+                                    create and maintain various risk management models;
+                                </h6>
+                                <h6>
+                                    <strong>11 .</strong> for conducting audits and for record keeping purposes;
+                                </h6>
+                                <h6>
+                                    <strong>12 .</strong> for selective offers and promotions.
+
+
+                                </h6>
+                                <br>
+
+                                <h6><strong>External processing: </strong></h6>
+                                <h6>We may provide your personal information to our affiliates or other trusted
+                                    businesses or persons or service providers engaged by us, or institutions that we
+                                    partner with to assist us with providing you with products/services to better serve
+                                    your needs and interests, based on your instructions and in compliance with our
+                                    Privacy Policy and any other appropriate confidentiality and security measures.
+
+                                    We also use your Personal Data to fulfill the requirements of applicable
+                                    laws/regulations and/or court orders/regulatory directives received by us.</h6>
+                                <br>
+                                <h6><strong>Purging of your Personal Data</strong></h6>
+
+                                <h6>
+                                    <strong>1 .</strong> You may delete your HUDELS account at any point of time by
+                                    making such choice in the HUDELS’s desktop website, mobile WAP site or mobile
+                                    application. With this we will no longer provide your data for external processing
+                                    as mentioned above. However, we retain your Personal Data as long as the purpose for
+                                    its usage exists, after which the same is disposed off by us except for any record
+                                    retention required as per applicable law.
+                                </h6>
+
+                                <h6> <strong>2 .</strong> The provisions of various laws require your transaction logs
+                                    to be stored for longer periods post the deletion of an account. Further, in the
+                                    event of the pendency of any legal/regulatory proceeding or receipt of any legal
+                                    and/or regulatory direction to that effect, we may be required by the law of the
+                                    land to retain your Personal Data for longer periods.</h6>
+
+                                <h6><strong>Links to other websites</strong></h6>
+                                <h6>Our website may contain links to other websites which are not maintained by us. This
+                                    privacy policy only applies to us. You are requested to read the other websites’
+                                    privacy policies when visiting these websites.</h6>
+
+                                <br>
+                                <h6><strong>Reasonable Security Practices and Procedures
+
+                                    </strong></h6>
+                                <h6>We take various steps and measures to protect the security of your Personal Data
+                                    from misuse, loss, unauthorised access, modification or disclosure. The security of
+                                    your data is important to us, but remember that no method of transmission over the
+                                    Internet, or method of electronic storage is 100% secure. While we strive to use
+                                    commercially acceptable means to protect your Personal Data, we cannot guarantee its
+                                    absolute security.
+
+                                </h6>
+
+                                <br>
+                                <h6><strong>Children's Privacy</strong></h6>
+                                <h6>Our Service does not address anyone under the age of 18 ("Children"). We do not
+                                    knowingly collect personally identifiable information from anyone under the age of
+                                    18. If you are a parent or guardian and you are aware that your Children has
+                                    provided us with Personal Data, please contact us. If we become aware that we have
+                                    collected Personal Data from children without verification of parental consent, we
+                                    take steps to remove that information from our servers.</h6>
+                                <br>
+                                <h6><strong>Contact us</strong></h6>
+                                <h6>You may contact us on any aspect of this policy or for any discrepancies/grievances
+                                    with respect to your Personal Data, by writing to our Grievance Officer at
+
+                                    Hudels Hospitality Services Pvt Ltd
+
+                                    1stFloor, Pandiyalil Building, PazhoorTemple Road, Piravom, Kochi 560068
+
+                                    <a href="varun@hudels.com">varun@hudels.com</a>
+
+                                    You can also contact us by visiting contact us page on our website.
+
+                                </h6>
+<br>
+                                <h6><strong>Policy Review & Update</strong></h6>
+                                <h6>This policy will be reviewed by us as and when required and the same may change at
+                                    any time. While we will make reasonable efforts to keep you posted on any updates to
+                                    this privacy policy. You make sure that you have read, understood and agreed to the
+                                    changes made in the privacy policy every time you access or use this website/ app.
+
+                                </h6>
+<br>
+<div class="col-lg-6">
+    
+                    <h6>|<a href="www.hudels.com"> www.hudels.com </a>  |</h6>
+                    <img class="logo_img" src="{% static 'assets/images/HUDELS.png' %}" alt=""
+                                style="width:20% ; margin-top: 10px;">
+
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <p>Copyright © 2022 Hudels Hospitality Services. All Rights Reserved.
+                       <br> <a href="{% url 'privacy' %}">Privacy & Policy</a> | <a href="{% url 'terms' %}">Terms and Conditions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        setTimeout(function () {
+            $('.loader-bg').fadeToggle();
+        }, 3500);
+    </script>
+
+
+    <!-- Scripts -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/animation.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+</body>
+
+</html>

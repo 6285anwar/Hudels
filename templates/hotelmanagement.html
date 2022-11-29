@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <link rel="icon" href="{% static 'assets/images/HUDELS.png' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title>HUDELS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-digimedia-v3.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+
+    <style>
+        .why-us {
+            padding-bottom: 0;
+        }
+
+        .why-us .img-bg {
+            min-height: 500px;
+            background-size: cover;
+        }
+
+        .why-us .slides {
+            background-color: #f7f9fc;
+        }
+
+        .why-us h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-secondary);
+        }
+
+        .why-us h4 {
+            font-size: 18px;
+            font-weight: 400;
+            color: #29486a;
+            font-family: var(--font-secondary);
+        }
+
+        .why-us .swiper {
+            margin: 140px 140px 120px 140px;
+            overflow: hidden;
+        }
+
+        .why-us .swiper-button-prev:after,
+        .why-us .swiper-button-next:after {
+            font-size: 24px;
+            color: var(--color-secondary);
+        }
+
+        .why-us .swiper-button-prev {
+            left: 80px;
+        }
+
+        .why-us .swiper-button-next {
+            right: 80px;
+        }
+
+        .why-us .swiper-pagination {
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .why-us .swiper-pagination .swiper-pagination-bullet {
+            background-color: var(--color-secondary);
+        }
+
+        .why-us .swiper-pagination .swiper-pagination-bullet-active {
+            background-color: var(--color-primary);
+        }
+
+        @media (max-width: 1200px) {
+            .why-us .swiper {
+                margin: 60px 60px 40px 60px;
+            }
+
+            .why-us .swiper-button-prev,
+            .why-us .swiper-button-next {
+                display: none;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .why-us .swiper {
+                margin: 40px 40px 20px 40px;
+            }
+        }
+
+        .page-about .why-us {
+            padding: 0 0 80px 0;
+        }
+
+        .services .icon img {
+            margin-bottom: 10px;
+            max-width: 50px;
+            min-width: 50px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .logo_img {
+                margin-left: -100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <!-- <div class="loader-bg">
+        <div class="loader-p">
+
+        </div>
+    </div> -->
+    <!-- ***** Preloader End ***** -->
+
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky wow slideInDown " data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="" onclick="return getData()" class="logo">
+                            <img class="logo_img" src="{% static 'assets/images/HUDELS.png' %}" alt=""
+                                style="width:40% ;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="{% url 'hudels' %}">Home</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'about' %}">About</a></li>
+                            <li class="scroll-to-section"><a href="#services" class="active">Services</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'partnership' %}">Partnership</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'products' %}">Products</a></li>
+
+                            <li class="scroll-to-section"><a href="{% url 'contact' %}">Contact</a></li>
+                            <li class="scroll-to-section">
+                                <div class="border-first-button"><a href="#">Career</a></div>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+
+
+
+    <div id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <span>Product Overview</span>
+                <h2><u>Review Management</u></h2>
+
+            </div>
+            <br><br>
+            <div class="row">
+                <section id="features" class="features">
+                    <div class="container">
+
+                        <div class="row gy-4 align-items-center features-item mt-1" data-aos="fade-up">
+
+                            <div class="col-md-5">
+                                <img src="{% static 'assets/images/Reviews-removebg-preview.png' %}" class="img-fluid"
+                                    alt="">
+                            </div>
+                            <div class="col-md-7">
+                                <h5>Collect Review at Check out
+                                    using our tool on Hotels Device,
+                                    Tool identifies the
+                                    customer Sentiment
+                                    based on Internal Rating</h5>
+
+                            </div>
+                        </div><!-- Features Item -->
+
+                        <div class="row gy-4 align-items-center features-item " data-aos="fade-up">
+                            <div class="col-md-5 order-1 order-md-2">
+                                <div class="row">
+                                    <img src="{% static 'assets/images/feedback-concept-for-customer-satisfaction-vector-27216696-removebg-preview.png' %}"
+                                        class="img-fluid" alt="" style="width: 50%;"> <img
+                                        src="{% static 'assets/images/feedback-concept-for-customer-satisfaction-vector-27216701-removebg-preview.png' %}"
+                                        class="img-fluid" alt="" style="width: 50%;">
+                                </div>
+                            </div>
+                            <div class="col-md-7 order-2 order-md-1">
+                                <h5>Each Customer feedback is important and we help you collect your Customer feedback, The
+                                    customer is prompted to
+                                    post the review from the
+                                    customers phone by scanning the Exclusive QR Code, Unhappy Customers
+                                    are sent an apology
+                                    mail and Hotel
+                                    Management is notified instantly</h5>
+                            </div>
+                        </div><!-- Features Item -->
+
+                        <div class="row gy-4 align-items-center features-item " data-aos="fade-up">
+                            <div class="col-md-5">
+                                <img src="{% static 'assets/images/601x326-removebg-preview.png' %}" class="img-fluid"
+                                    alt="">
+                            </div>
+                            <div class="col-md-7">
+                                <h5>Ratings & Reviews are
+                                    Submitted instantly and
+                                    can be accessed from
+                                    the Back end login access, Analyze
+                                    the Results from our
+                                    exclusive Backend and
+                                    get exact area to
+                                    improve</h5>
+                            </div>
+                        </div><!-- Features Item -->
+
+                        <div class="row gy-4 align-items-center features-item " data-aos="fade-up">
+                            <div class="col-md-5 order-1 order-md-2">
+                                <img src="{% static 'assets/images/Jan-Survey_1-scaled-removebg-preview.png' %}"
+                                    class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-7 order-2 order-md-1">
+                                <h5>Create Custom Templates in our
+                                    Backend and send that to
+                                    Customers Periodicallv based on
+                                    Source of booking and previous
+                                    stay Rating, .</h5>
+                            </div>
+                        </div><!-- Features Item -->
+
+                        <div class="row gy-4 align-items-center features-item " data-aos="fade-up">
+                            <div class="col-md-5">
+                                <img src="{% static 'assets/images/design-concept-hotel-search-booking-online-hotel-building-detailed-reservation-application-interface-hand-holding-smart-phone-modern-flat-style-design-illustration-isolated_126608-236-removebg-preview.png' %}"
+                                    class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-7">
+                                <h5>Better Visibility in google and
+                                    higher listings, Thus more clicks and
+                                    visitors and this will improve the
+                                    bookings both direct and on Online
+                                    platforms</h5>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr class="mt-3 mb-3" />
+
+                <div class="section-header">
+
+                    <h2><u>Customer Management</u></h2>
+
+                    <br>
+                    <h5 class="text-primary">SELF & WEB CHECK-IN</h5>
+
+                </div>
+
+                <div class="row gy-4 align-items-center features-item " data-aos="fade-up">
+                    
+                    <div class="col-md-5 order-1 order-md-2">
+                        <div class="row">
+                            <img src="{% static 'assets/images/cust2.jpeg' %}" class="img-fluid" alt="" style="width: 90%;">
+                        </div>
+                    </div>
+                    <div class="col-md-7 order-2 order-md-1">
+                        <h5>Customer Contactless self &
+                            safe check-in process. Scan
+                            the QR Code at the
+                            reception. Fill the GRC &
+                            Upload ID. Multiple Guests can check in at the same time. No waiting at the reception.
+                            Express Check-in for Repeated Customers, Every Customer is sent a web check in link with
+                            add-on services like Pick-up, SPA, Food, Activities, Sight-Seeing</h5>
+                    </div>
+                </div>
+                <hr class="mt-3 mb-3" />
+                <div class="section-header">
+
+                    
+                    <h5 class="text-primary">REVIEW , OFFERS & ORGANIC MARKETING</h5>
+
+                </div>
+
+                <div class="row gy-4 align-items-center features-item " data-aos="fade-up">
+                    <div class="col-md-5">
+                        <img src="{% static 'assets/images/review-sites-7-1200x675-c-removebg-preview.png' %}"
+                            class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-7">
+                        <h5>Collect Reviews In- house Customer feedback collected and prompted to post them to Tripadvisor & Google.Send offers to Customers you have served and prompt them to book directly.Business Contributor Higher Visibility Frequent Review Collection Organic Process Increase your revenue with more Customers</h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="col-lg-12 text-center mt-3">
+            <a href="">
+                <button type="button" class="btn btn-outline-primary">Back to Top <i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+            </a>
+            <a href="https://socioconnects.com/">
+                <button type="button" class="btn btn-outline-primary">Socioconnects.com<i class="fa fa-scribd" aria-hidden="true"></i></button>
+            </a>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <p>Copyright © 2022 Hudels Hospitality Services. All Rights Reserved.
+                       <br> <a href="{% url 'privacy' %}">Privacy & Policy</a> | <a href="{% url 'terms' %}">Terms and Conditions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        setTimeout(function () {
+            $('.loader-bg').fadeToggle();
+        }, 3500);
+    </script>
+
+
+
+
+    <!-- Scripts -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/animation.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+</body>
+
+</html>

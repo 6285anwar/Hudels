@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <link rel="icon" href="{% static 'assets/images/HUDELS.png' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title>HUDELS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-digimedia-v3.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+
+    <style>
+        h6 {
+            font-weight: normal;
+            text-align: justify;
+        }
+
+        .loader-bg {
+            position: fixed;
+            z-index: 999999;
+            background: #fff;
+            width: 100%;
+            height: 100%;
+        }
+
+        .loader-p {
+            border: 0 solid transparent;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: calc(50vh - 75px);
+            left: calc(50vw - 75px);
+        }
+
+        .loader-p:before,
+        .loader-p:after {
+            content: '';
+            border: 1em solid #15e38a;
+            border-radius: 50%;
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: loader 2s linear infinite;
+            opacity: 0;
+        }
+
+        .loader-p:before {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes loader {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        .services .icon img {
+            margin-bottom: 10px;
+            max-width: 50px;
+            min-width: 50px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .logo_img {
+                margin-left: -100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <!-- <div class="loader-bg">
+        <div class="loader-p">
+
+        </div>
+    </div> -->
+    <!-- ***** Preloader End ***** -->
+
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="" onclick="return getData()" class="logo">
+                            <img class="logo_img" src="{% static 'assets/images/HUDELS.png' %}" alt=""
+                                style="width:40% ;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="{% url 'hudels' %}">Home</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'about' %}">About</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'hudels' %}">Services</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'partnership' %}">Partnership</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'products' %}">Products</a></li>
+                            <li class="scroll-to-section"><a href="#contact">Contact</a></li>
+                            <li class="scroll-to-section">
+                                <div class="border-first-button"><a href="">Career</a></div>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+
+
+    <div id="about" class="about section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+
+                        <div class="col-lg-12 align-self-center  wow fadeInUp" data-wow-duration="1s"
+                            data-wow-delay="0.5s">
+                            <div class="about-right-content text-justify">
+                                <div class="section-heading">
+                                    <h6>Terms & Conditions
+                                    </h6>
+                                    <h5>AGREEMENT FOR ACCESS AND USE OF HUDELS OWNED APP/WEBSITE FOR BUYERS/CUSTOMERS
+
+                                    </h5>
+                                    <br>
+                                </div>
+                                <h6><strong>Welcome to Hudels :</strong></h6>
+                                <h6> The Deal Corner is a platform to help businesses grow along with the benefit of
+                                    customers. The Deal Corner is a product/brand/service owned by Hudels Hospitality
+                                    Services Pvt Ltd, Hereinafter will be referred as Hudels.
+                                    <br>
+                                    This document is an electronic record under Information Technology Act, 2000 and its
+                                    terms and conditions shall be intimated to the clients of HUDELS prior to entering
+                                    into any transactions with them and clients shall be informed of all the terms and
+                                    conditions of the HUDELS scheme and shall come into force only after clients of
+                                    HUDELS give consent for using the App/Website of HUDELS after reading and
+                                    understanding the scheme of HUDELS by clicking “I AGREE” button.
+
+                                </h6>
+                                <br>
+                                <h6>
+                                    THIS AGREMENT contains the terms and conditions for accessing the HUDELS App/Website
+                                    owned by Hudels Hospitality Services Pvt Ltd and use the permitted activities
+                                    authenticated by HUDELS. This App/Website is only platform where the users i.e.
+                                    buyers and business establishments owner registered with App/Website shall meet and
+                                    interact with one another for obtaining/providing discounts/deals/offers to attract
+                                    new customers for mutual benefit AND OR pre-booking of available time slot/s to
+                                    visit the outlet/s under “Book My Visit” Facility. The entire scheme is
+                                    elaboratively described in detail in the App/Website of HUDELS.
+
+                                </h6>
+                                <br>
+                                <h6>
+                                    HUDELS App/Website has very limited role in this business activity and is strictly
+                                    limited of facilitator for smooth functioning of the scheme AND OR book a
+                                    visit/appointment. HUDELS will assist the customers to pre-book the available time
+                                    slots to visit the outlet/s of registered business establishments AND OR obtain
+                                    discounts/deals/offers and assist in redemptions of discounts/deals/offers issued by
+                                    business establishments registered with the HUDELS App/Website. The customer/buyer
+                                    of business establishments can access this App/Website platform for the services
+                                    offered by HUDELS on buyer’s mobile or on buyer’s internet connected device. For
+                                    accessing the site/or using the services of HUDELS the customer/buyer has to
+                                    register on Hudels App/Website and click, “I AGREE” to bind himself/herself by the
+                                    terms and conditions of this agreement as listed below.</h6>
+                                <br>
+                                <h6><strong>Definitions:</strong></h6>
+                                <br>
+                                <h6>
+                                    <strong>Agreement</strong>
+                                    Agreement Means the terms and conditions (T&C) contained herein for using the
+                                    App/Website and terms and conditions of privacy policy issued from time to time by
+                                    HUDELS App/Website. All combined shall form part of this agreement even after they
+                                    are amended, notated, supplemented, replaced, deleted and updated subsequently.
+                                </h6>
+                                <br>
+
+
+                                <h6>
+                                    <strong>Website: </strong>
+                                    Website means <a href="www.hudels.com">www.hudels.com</a> includes all on line
+                                    platforms owned and
+                                    operated by HUDELS for the facilitation of its services and for smooth functioning
+                                    of its business.
+                                </h6>
+
+                                <br>
+                                <h6>
+                                    <strong>App:</strong>
+                                    App means HUDELS app published by Hudels Hospitality Services Pvt Ltd . on play
+                                    store as well as App store which includes all on line platforms owned and operated
+                                    by HUDELS for the facilitation of its services and for smooth functioning of its
+                                    business.
+                                </h6>
+
+                                <br>
+                                <h6>
+                                    <strong>Business Establishment:</strong>
+                                    Means Seller/Vendor/Merchant who are registered with HUDELS
+                                    App/Website who offer various kinds of discounts/deals/offers on sale of their
+                                    product and services on the App/Website AND OR offer appointment/pre-booking of
+                                    available time slot/s to visit the outlet/s.
+                                </h6>
+
+                                <br>
+                                <h6>
+                                    <strong>Customer/Buyer: </strong>
+                                    Means any person or legal entity competent to enter contract as per
+                                    Indian Contract Act, 1872 who purchases the offers of various kinds of
+                                    discount/deals/offer issued by registered business establishments on the App/Website
+                                    of HUDELS. Registration for customer/buyer on the App/Website is mandatory.
+                                </h6>
+
+                                <br>
+                                <h6>
+                                    <strong>User/You/Your:</strong>
+                                    Means the customer/buyer accessing the App/Website for availing the
+                                    services of HUDELS as stipulated on the App/Website owned and maintained by Hudels
+                                    Hospitality Services Pvt Ltd . for availing the discount/deal/offer made by the
+                                    registered business establishments in the form of business discount/deal/offer as
+                                    per their business policy AND OR pre-booking of available time slots to visit the
+                                    outlet/s of Registered business establishment.
+                                </h6>
+
+                                <br>
+                                <h6>
+                                    <strong>Hudels Prime:</strong>
+                                    Hudels prime is a membership program where customer/buyer can
+                                    subscribe for either annual or half yearly membership plans. Customer/Buyer can
+                                    avail better discounts/deals/offers by subscribing to Hudels prime.
+                                </h6>
+
+                                <br>
+                                <h6>
+                                    <strong> Term We/us/our:</strong>
+                                    Means HUDELS App/Website owned by Hudels Hospitality Services Pvt
+                                    Ltd ..
+                                </h6>
+
+                                <br>
+                                <h6>
+                                    <strong> Book My Visit: </strong>
+                                    Means facility for customers in HUDELS App to pre-book available time
+                                    slot/s to visit the outlet/s of business establishment registered with HUDELS.
+                                </h6>
+
+
+
+
+                                <br>
+                                <h6>
+                                    <strong>Product and Services: </strong>
+                                    Means goods or services sold/provided by the business
+                                    establishments registered with HUDELS.
+                                </h6>
+                                <br>
+                                <h6>
+                                    <strong> Reward Points: </strong>
+
+                                    Means the Points earned by the registered customers/buyers as per
+                                    stipulated terms of the scheme of HUDELS.
+                                </h6>
+
+                                <br>
+                                <h6>
+                                    <strong> Coupon: </strong>
+                                    Coupon Means discounts/deals/offers, offered by registered business
+                                    establishments to buyers/customers.
+                                </h6>
+                                </h6>
+
+                                <br>
+
+
+
+
+
+
+
+
+
+
+
+                                <h6>
+                                    <strong> Terms and Conditions for strict compliance by customers/buyers: </strong>
+                                </h6>
+                                <br>
+
+
+
+
+                                <h6>
+                                    <strong>1 .</strong> Customer/Buyer must be of 18 years of age or above and he/she
+                                    must be of sound mind, is not disabled by any law in India from entering into this
+                                    agreement and is capable to enter, perform the contract under Indian Contract Act,
+                                    1872.
+                                </h6>
+
+                                <h6> <strong>2 .</strong> If the customer is under the age of 18 he/she may utilize the
+                                    services of site but he/she shall do so only with involvement/consent and guidance
+                                    of his/her parents and/or legal guardians, under such parents/legal guardian’s
+                                    registered account.
+                                </h6>
+
+                                <h6> <strong>3 .</strong> Customer/buyer has to provide the details like his/her name,
+                                    gender, mobile number, email Id, state, city, area, pin code, date of birth and
+                                    anniversary date before accessing the App/Website.
+                                </h6>
+
+                                <h6> <strong>4 .</strong> The customer/buyer shall have two options after registration
+                                    either to buy individual coupon of various discounts/deals/offers OR subscribe to
+                                    Hudels Prime membership plan using Hudels App/Website.
+
+
+                                </h6>
+
+                                <h6> <strong>5 .</strong> The customer registered with the App/Website of HUDELS shall
+                                    get the benefit of selecting his/her coupon of choice and store the same in “My
+                                    Cart” till the validity of coupon AND OR shall get facility of pre-booking available
+                                    time slot/s to visit outlet/s of registered business establishment via “Book My
+                                    Visit” Service.
+                                </h6>
+
+                                <h6> <strong>6 .</strong> The consumer/buyer shall not be eligible of any coupons if it
+                                    is detected that he/she has withheld the payments or has indulged in unscrupulous
+                                    activity, fraud or for bulk purchases made by him/her from the registered business
+                                    establishment by him/her.
+                                </h6>
+
+                                <h6> <strong>7 .</strong> The customer/buyer shall use the confirmed time slots to visit
+                                    the outlet/s as per the given confirmation by registered business establishment
+                                    under HUDELS “Book My Visit” facility, he/she may or may not entertain before or
+                                    after the confirmed time slot/s.
+                                </h6>
+
+                                <h6> <strong>8 .</strong> The customer/buyer shall use the coupons within the stipulated
+                                    validity period mentioned on the coupon itself.
+                                </h6>
+
+                                <h6> <strong>9 .</strong> FHUDELS has the right to terminate any future transactions
+                                    including the benefit of reward points without any reasons, at his sole discretion
+                                    without any liability on its part if strict compliance is not adhered to the terms
+                                    and conditions of this agreement plus that of operating instructions/terms of HUDELS
+                                    App/Website.
+                                </h6>
+                                <h6> <strong>10 .</strong> Customer/buyer agrees that HUDELS has the right to
+                                    modify/change all or any of the terms of this agreement at his discretion without
+                                    giving any reasons or without any intimation whatsoever to customer/buyer.
+                                </h6>
+
+                                <h6> <strong>11 .</strong> Customer/buyer agrees and acknowledges that HUDELS is not
+                                    involved in any time slot/s arrangement and number of customers allowed in a
+                                    particular time slot/s for appointment/visit at outlet/s of registered business
+                                    establishment and hence it is sole responsibility of business establishment to
+                                    entertain customers as per the provided confirmation of time slots under HUDELS
+                                    “Book My Visit” facility.
+                                </h6>
+
+                                <h6> <strong>12 .</strong> Customer/buyer agrees and acknowledges that HUDELS is not
+                                    involved in any sale and purchase of goods/products and hence cannot
+                                    warranty/guaranty of the quality, quantity, price, deliverables etc. of the
+                                    goods/services purchased by him/her from the registered business establishment.
+                                </h6>
+                                <h6> <strong>13 .</strong> Customer/buyer agrees and acknowledges that HUDELS is only a
+                                    facilitator and is not a party and is not in control in any manner with regard to
+                                    deciding and arranging time slot/s to visit/appointment at the outlet/s AND OR any
+                                    business transactions between the registered business establishment and the
+                                    Customer/Buyer inter se.
+                                </h6>
+                                <h6> <strong>14 .</strong> The customer/buyer must select the appropriate and available
+                                    time slot/s as per his/her choice and convenience by paying for the same under
+                                    HUDELS “Book My Visit” facility only after fully satisfying himself/herself
+                                    regarding the same.
+                                </h6>
+                                <h6> <strong>15 .</strong> The customer/buyer has to select the products/services of
+                                    his/her choice by paying for the same.
+                                </h6>
+                                <h6> <strong>16 .</strong> Customer/buyer shall not raise any grievance or objection
+                                    after confirming the visit/appointment time slot/s at the outlet/s of the registered
+                                    business establishments with HUDELS as both parties have confirmed the same as per
+                                    their choice and mutual convenience.
+                                </h6>
+                                <h6> <strong>17 .</strong> Customer/buyer shall not raise any grievance or objection
+                                    after purchasing the products from the registered business establishments with
+                                    HUDELS as he/she has personally verified the products/services from the point of
+                                    sale before entering into such purchase transaction.
+                                </h6>
+                                <h6> <strong>18 .</strong> The customer/buyer should inform the registered business
+                                    establishment about his/her intention to redeem the coupon related to
+                                    products/services offered by such registered business establishment on Hudels
+                                    App/Website, before making purchase.
+                                </h6>
+
+                                <h6> <strong>19 .</strong> The customer/buyer agrees and acknowledges that he/she has
+                                    read all the terms and conditions of scheme of HUDELS App/Website and has understood
+                                    the same and has agreed to comply with the same without any demur the instructions
+                                    issued by HUDELS and these instructions are mandatory in nature. Customer shall be
+                                    bound by cent percent compliance of all the terms and conditions or operational
+                                    instructions along with the terms of this agreement to avail the benefits offered
+                                    under HUDELS App/Website.
+                                </h6>
+                                <h6> <strong>20 .</strong> Customer/Buyer agrees that HUDELS shall not be liable for any
+                                    damages or cost on account of any dispute occurring between customer/buyer and
+                                    registered business establishment nor the HUDELS shall be responsible nor liable to
+                                    mediate to resolve any disputes between buyers/vendors.
+                                </h6>
+                                <h6> <strong> 21.</strong> Customer/buyer agrees and undertakes that he/she is accepting
+                                    the services available on this App/Website of HUDELS and is transacting on this
+                                    App/Website at his/her sole risk and he/she has to make his/her decisions for
+                                    obtaining the coupons as per his/her discretion and best prudent judgment from the
+                                    available options under the scheme AND OR Booking and confirming the
+                                    Visit/Appointment.
+                                </h6>
+                                <h6> <strong>22 .</strong> Customer/buyer shall not hold HUDELS responsible for any
+                                    interruptions or failure in communication line, server where the app/website is
+                                    hosted or due to computer virus leading to destructions or alteration of any record
+                                    in the functioning of HUDELS App/Website.
+                                </h6>
+                                <h6> <strong>23 .</strong> Customer/buyer agrees and acknowledges that HUDELS shall not
+                                    be responsible for any misbehavior or any tortuous behavior or negligence or any
+                                    other action or omission by the registered business establishments.
+                                </h6>
+                                <h6> <strong>24 .</strong> Customer/buyer agrees and acknowledges that visit/appointment
+                                    time slot/s chosen by him/her to visit the outlet/s of the registered business
+                                    establishments who has issued the same shall be strictly as per registered business
+                                    establishment’s policy and as per terms and conditions stated on for “Book My Visit”
+                                    facility. No extra time slot/s which is not confirmed shall be granted to the
+                                    customer.
+                                </h6>
+                                <h6> <strong>25 .</strong> Customer/buyer agrees and acknowledges that coupons chosen by
+                                    him/her of the registered business establishments who has issued the same shall be
+                                    strictly as per registered business establishment’s policy and as per terms and
+                                    conditions stated on the coupons. No extra benefits not mentioned in the coupons
+                                    shall be granted to the customer.
+                                </h6>
+                                <h6> <strong>26 .</strong> Customer/Buyer agrees and undertakes that HUDELS shall be
+                                    authorized to give or utilize information gathered about him/her to third party or
+                                    for its internal use without obtaining the necessary consent from the buyer/
+                                    customers.
+                                </h6>
+                                <h6> <strong>27 .</strong> Customer/Buyer agrees and undertakes that HUDELS has
+                                    authority to change, alter, vary, delete, add any terms and conditions at any time
+                                    after this agreement has come into force and customer shall not have any right to
+                                    object to the same.
+                                </h6>
+                                <h6> <strong>28 .</strong> Customer/Buyer agrees and undertakes that he/she shall not
+                                    purchase any product or services which are prohibited under any laws prevailing in
+                                    India.
+                                </h6>
+                                <h6> <strong>29 .</strong> Customer/Buyer agrees and undertakes that he/she shall
+                                    indemnify the HUDELS and its employees against any loss or damages suffered by
+                                    him/her.
+                                </h6>
+                                <h6> <strong>30 .</strong> Customer/Buyer agrees and undertakes that HUDELS has right to
+                                    terminate or suspend access to its App/Website to the customers who are
+                                    de-registered on account of default committed by them in honoring their obligations.
+                                </h6>
+                                <h6> <strong>31 .</strong> Customer/Buyer agrees and undertakes that HUDELS is under no
+                                    liability to customer/buyer to provide reward points from its side if the conditions
+                                    required for earning the reward points are not fulfilled by the customer.
+                                </h6>
+                                <h6> <strong>32 .</strong> Any customer/buyer can register on Hudels App/Website using
+                                    only one mobile number which is legally purchased by him/her against valid id proof
+                                    as per the Indian law. Hudels App/Website reserves the right to terminate some or
+                                    all features for any customer/buyer who tries to avail the benefits using more than
+                                    one mobile numbers from same device or multiple devices.
+                                </h6>
+                                <h6> <strong>33 . </strong> <strong> Force Majeure: </strong> HUDELS shall have no
+                                    liability towards the customer/byer in case of events happening of the nature of
+                                    force majeure till the effect of Force Majeure incidents are over. No party shall be
+                                    held responsible for failure if they are unable to perform their obligations due to
+                                    effect of Force Majeure events like floods, natural disasters, war, act of terror,
+                                    political unrest, technical snags, pandemic, act of God and change of law or any
+                                    occurrence beyond the reasonable control of the parties.
+                                </h6>
+                                <h6> <strong>34 .</strong> Customer/Buyer agrees and undertakes that not insistence on
+                                    any conditions of this agreement shall not be treated as waiver of any of the rights
+                                    of the HUDELS.
+                                </h6>
+                                <h6> <strong>35 .</strong> Customer/Buyer agrees and undertakes that this agreement and
+                                    other ancillary agreements which are part of this agreement and their terms and
+                                    conditions shall be governed by the law of India and in case of any conflict or
+                                    dispute arising in relation hereto between customer/buyer and HUDELS shall be
+                                    subject to the exclusive jurisdiction of the courts at Ahmedabad, Gujarat (India).
+                                </h6>
+                                <h6> <strong>36 .</strong> Customer/Buyer agrees and undertakes that all transactions
+                                    with regard to purchase of goods and services with registered business establishment
+                                    and issuance and redeeming of coupons shall be in Indian rupees only.
+                                </h6>
+                                <h6> <strong>37 .</strong> Customer/Buyer agrees and undertakes that services of HUDELS
+                                    under this App/Website shall be available within the territory of India.
+                                </h6>
+                                <h6> <strong>38 .</strong> Customer/Buyer agrees and undertakes that HUDELS reserves its
+                                    right to communicate with customer/buyer on his/her mobile via SMS, in app
+                                    notifications etc. or through Emails and customer/buyer shall have no right to block
+                                    HUDELS under any category including “do not disturb”.
+                                </h6>
+                                <h6> <strong>39 .</strong> Customer/Buyer agrees and undertakes that any typographical
+                                    or any error in displaying discounts/deals/offers on Hudels App/Website shall not
+                                    vest any right in the favor of customer for obtaining undue benefit of the offer
+                                    from HUDELS and HUDELS shall have right to correct or recover the damage or loss
+                                    caused to it on account of such errors.
+                                </h6>
+                                <h6> <strong>40 .</strong> Customer/Buyer agrees and undertakes that HUDELS shall not be
+                                    liable for any products and services purchased by the customer from the registered
+                                    business establishment with the HUDELS App/Website as he/she has purchased the same
+                                    after satisfying himself/herself about product and services and customer is aware
+                                    that HUDELS is not in the business of selling of product and services and only
+                                    acting as facilitator in implementing discounts/deals/offers decisions.
+                                </h6>
+                                <h6> <strong>41 .</strong> HUDELS App/Website shall be announcing additional benefits,
+                                    Hudels prime, schemes, information about arrival of new products, information about
+                                    new brands promoted by registered business establishments from time to time using in
+                                    app notifications, by displaying such information during the usage of app as well as
+                                    by SMS from time to time. By accepting this agreement customer/buyer also agrees to
+                                    receive such communication from HUDELS unconditionally. However, whether to act on
+                                    such information or not shall be at the sole discretion of customer/ buyer.
+                                </h6>
+                                <h6> <strong>42 .</strong> As a part of promotion program HUDELS may offer coupons of
+                                    registered business establishments from time to time through Hudels App/Website.
+                                </h6>
+
+                                <h6> <strong>43 .</strong> Customer/Buyer agrees and undertakes that he/she shall not
+                                    hold HUDELS responsible for inability to use booked and confirmed Visit/Appointment
+                                    under “Book My Visit” facility AND OR the products or services or for not redeeming
+                                    the coupons issued by the registered business establishment with HUDELS App/Website.
+                                </h6>
+                                <h6> <strong>44 .</strong> Customer/Buyer agrees and undertakes that he/she shall not
+                                    hold HUDELS responsible for any infringement of intellectual property rights
+                                    committed by registered business establishments in his transactions with
+                                    customer/buyer.
+                                </h6>
+                                <h6> <strong>45 .</strong> <strong> Confidential Information: </strong>The
+                                    customer/buyer shall not at any time divulge or allow to be divulged to any third
+                                    person not connected with the HUDELS App/Website any information which is
+                                    confidential in nature. Unless the said information has come in public domain or it
+                                    is strictly required for any legal proceedings. The customer/buyer shall be under
+                                    obligation not to pass on any such information without the consent from HUDELS in
+                                    writing to any third party not connected with business of HUDELS. The obligations
+                                    under this clause shall survive even after the termination of this agreement.
+                                </h6>
+                                <h6> <strong>46 .</strong> Customer/buyer hereby agrees and acknowledges that for
+                                    redemption of coupons from registered business establishments he/she is bound by the
+                                    following terms:
+                                </h6>
+
+
+
+                                <div class=" p-2">
+                                    <h6> <strong>a) </strong> He/She shall purchase the coupon of various
+                                        discounts/deals/offers announced by registered business establishment on Hudels
+                                        App/Website AND OR purchase the available membership plans to avail various
+                                        coupons of discounts/deals/offers announced by registered business establishment
+                                        in multiple categories on Hudels App/Website during his/her membership validity.
+                                    </h6>
+                                    <h6> <strong>b)</strong> He/she shall book and confirm the time slot/s to
+                                        visit/appointment at the outlet/s of the registered business establishment only
+                                        after checking his/her convenience for the same. In case of non-availability of
+                                        desired time slot/s, he/she will check the other available time slot/s as per
+                                        his/her suitability.
+                                    </h6>
+                                    <h6> <strong>c)</strong> He/she shall inform the business establishment before the
+                                        purchase of product or services about his/her intention to redeem the coupons of
+                                        the registered business establishment.
+                                    </h6>
+                                    <h6> <strong>d)</strong> He/she shall provide his/her mobile number to registered
+                                        business establishment at the time of purchase of product/services for enabling
+                                        the Vendor to complete the necessary formalities to intimate HUDELS about
+                                        customer’s eligibility of the amount of discounts/deals/offers and after that
+                                        also to other business establishments at the time of redemption of the coupons
+                                        issued by them to enable the redeeming registered business establishments to
+                                        intimate the business transactions entered by them with the customer/buyer.
+
+
+                                    </h6>
+                                    <h6> <strong>e)</strong> Customer shall use coupons for one use (once) and shall not
+                                        be permitted to use in parts or installments.
+                                    </h6>
+                                    <h6> <strong>f)</strong> Customer shall not club the benefit of discount under the
+                                        scheme with any other offer while redeeming the coupons.
+                                    </h6>
+                                    <h6> <strong>g)</strong> The customer shall use the coupons strictly within the
+                                        validity period of coupons. In no circumstances validity period shall be
+                                        extended.
+                                    </h6>
+                                    <h6> <strong>h)</strong> Customer shall be entitled to get only those benefits which
+                                        are mentioned on the coupons.
+                                    </h6>
+                                    <h6> <strong>i)</strong> Customer shall strictly adhere to return policy if any, of
+                                        the business establishments if same is mentioned on the coupons. In normal
+                                        circumstances goods once sold shall not be returned.
+                                    </h6>
+                                    <h6> <strong>j)</strong> Any dispute between registered business establishment and
+                                        Customer/Buyer shall be resolved directly by themselves and HUDELS shall not
+                                        interfere in this dispute nor shall be held liable for any loss or damages
+                                        suffered by customer/vendor or registered business establishment in the purchase
+                                        transactions entered by them inter se.
+                                    </h6>
+                                    <h6> <strong>k)</strong> All applicable taxes including GST if any shall be
+                                        borne/paid by the customers/buyers only.
+                                    </h6>
+                                </div>
+                                <br>
+                                <h6> <strong>47 . Operating procedure for using HUDELS by customers/buyers:</strong>
+                                </h6>
+
+
+
+
+                                <div class=" p-2">
+                                    <h6> <strong>a) </strong> Customer/Buyer can use the HUDELS App/Website either by
+                                        downloading the app in his/her mobile or by accessing the same through any
+                                        internet connected device which supports the same.
+                                    </h6>
+                                    <h6> <strong>b)</strong> Customer/buyer has to register with App/Website using
+                                        his/her mobile number to use HUDELS. One time password (OTP) shall be sent on
+                                        his/her mobile number for validation of mobile number.
+                                    </h6>
+                                    <h6> <strong>c)</strong> Customer/buyer agrees to purchase available membership
+                                        plans only after evaluating its benefits as per his/her requirement on Hudels
+                                        App/Website AND OR purchase available coupon of various discounts/deals/offers
+                                        only after agreeing with terms and conditions mentioned on the coupon on Hudels
+                                        App/Website.
+                                    </h6>
+                                    <h6> <strong>d)</strong> Customer/buyer agrees to select the appropriate time slot/s
+                                        to process the booking of available time slots under “Book My Visit: facility
+                                        and visit the outlets only after confirmation of requested time slot/s from the
+                                        registered business establishment. In case of rejection of time slot/s booking
+                                        request, he/ she needs to try again the same process to book the
+                                        visit/appointment.
+                                    </h6>
+                                    <h6> <strong>e)</strong> Once coupons are selected by customer /buyer, the same can
+                                        be reviewed from “My Bag” option of the app.
+                                    </h6>
+                                    <h6> <strong>f)</strong> Customer/buyer can redeem all previously selected coupons
+                                        only after completion of purchase with the registered business establishment and
+                                        at the time of making payment of such purchase, provided he/she has informed
+                                        such registered business establishment about his/her intention to redeem the
+                                        coupon and the he/she possess a valid coupon based on all terms and conditions
+                                        mentioned in such coupon.
+                                    </h6>
+                                    <h6> <strong>g)</strong> Customer/buyer can also search for all registered business
+                                        establishments near his/her location to pre-book the visit/appointment as per
+                                        available time slot/s under “Book My Visit” facility at the outlet/s AND OR who
+                                        are offering HUDELS coupons. However, for using these features, he/she will have
+                                        to allow HUDELS app to use location services.
+                                    </h6>
+                                    <h6> <strong>h)</strong> Customer/Buyer will not hold Hudels responsible in case of
+                                        closure of any store/brand due to whatever reason/s, despite such store /brand
+                                        displaying their discounts/deals/offers on Hudels App/Website. In case of any
+                                        such event, maximum liability of Hudels App/website shall be to tune of charges
+                                        paid for buying that particular coupon, if any. Customer/buyer who has
+                                        subscribed for membership plan can select alternative offers available on Hudels
+                                        App/Website.
+                                    </h6>
+                                    <h6> <strong>i)</strong> In the event of any dispute or misunderstanding arising out
+                                        of any of the offers the store/outlet, store manager's decision shall be final
+                                        and binding on the coupon holders.
+                                    </h6>
+                                    <h6> <strong>j)</strong> Hudels.in will be making calls and sending SMS through a
+                                        third party platform.
+                                    </h6>
+                                    <h6> <strong>k)</strong> You agree to receive promotional calls on the number
+                                        shared, and such calls and SMS would be coming from a third party platform.
+                                    </h6>
+                                </div>
+
+
+
+
+                                <br>
+
+
+
+                                <h6>
+                                    <strong>Refund Policy:</strong>
+                                </h6>
+                                <h6>
+
+
+
+                                    All services rendered by the Company are provided on a non-refundable basis. This
+                                    includes, but it is not limited to, membership plan subscription charges, paid
+                                    coupons charges, membership plans upgrade fees, membership plans renewal fees and
+                                    any customize service coverage, regardless of usage. In addition, if your
+                                    subscription is canceled by the company for violation of this Agreement or as per
+                                    the business registration Policy, all payments made to the Company become completely
+                                    nonrefundable.
+                                </h6>
+                                <br>
+                                <h6>
+                                    For more information’s & clarity please write to us <a
+                                        href="sales@hudels.com">sales@hudels.com</a>
+                                </h6>
+
+                                <br>
+                                <div class="col-lg-6">
+                                    <h6>|<a href="www.hudels.com"> www.hudels.com </a>  |</h6>
+                                    <img class="logo_img" src="{% static 'assets/images/HUDELS.png' %}" alt=""
+                                        style="width:20% ; margin-top: 10px;">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <p>Copyright © 2022 Hudels Hospitality Services. All Rights Reserved.
+                        <br> <a href="{% url 'privacy' %}">Privacy & Policy</a> | <a href="{% url 'terms' %}">Terms and
+                            Conditions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        setTimeout(function () {
+            $('.loader-bg').fadeToggle();
+        }, 3500);
+    </script>
+
+
+    <!-- Scripts -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/animation.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+</body>
+
+</html>

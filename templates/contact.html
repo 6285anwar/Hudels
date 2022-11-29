@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <link rel="icon" href="{% static 'assets/images/HUDELS.png' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title>HUDELS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-digimedia-v3.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+
+    <style>
+        .fa{
+            color: #000000;
+        }
+        .fa-facebook:hover{
+            color:#1778f2;
+        }
+        .fa-instagram:hover{
+            color: #E1306C;
+        }
+        .fa-whatsapp:hover{
+            color:#00e15e;
+        }
+        .fa-twitter:hover{
+            color: #1DA1F2 ;
+        }
+        .fa-youtube:hover{
+           color: 	#FF0000;
+        }
+        .fa-google-plus:hover{
+            color: #db4a39;
+        }
+        .icon {
+
+            cursor: pointer;
+            
+        }
+
+        .loader-bg {
+            position: fixed;
+            z-index: 999999;
+            background: #fff;
+            width: 100%;
+            height: 100%;
+        }
+
+        .loader-p {
+            border: 0 solid transparent;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: calc(50vh - 75px);
+            left: calc(50vw - 75px);
+        }
+
+        .loader-p:before,
+        .loader-p:after {
+            content: '';
+            border: 1em solid #15e38a;
+            border-radius: 50%;
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: loader 2s linear infinite;
+            opacity: 0;
+        }
+
+        .loader-p:before {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes loader {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        .services .icon img {
+            margin-bottom: 10px;
+            max-width: 50px;
+            min-width: 50px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .logo_img {
+                margin-left: -100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <!-- <div class="loader-bg">
+        <div class="loader-p">
+
+        </div>
+    </div> -->
+    <!-- ***** Preloader End ***** -->
+
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="" onclick="return getData()" class="logo">
+                            <img class="logo_img" src="{% static 'assets/images/HUDELS.png' %}" alt=""
+                                style="width:40% ;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="{% url 'hudels' %}" >Home</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'about' %}">About</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'hudels' %}">Services</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'partnership' %}">Partnership</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'products' %}">Products</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'contact' %}" class="active">Contact</a></li>
+                            <li class="scroll-to-section">
+                                <div class="border-first-button"><a href="#">Career</a></div>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+
+    <div id="contact" class="contact-us section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <h6>Contact</h6>
+                        <h4>Our <em>Offices</em> </h4>
+                        <div class="line-dec"></div>
+                    </div>
+                </div>
+                <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
+                    <form id="contact" action="" method="post">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="contact-dec">
+                                    <img src="assets/images/contact-dec-v3.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="row mx-auto mt-2 mb-2">
+
+                                <div class="col-sm-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Registered Office :</h5>
+                                            <p class="card-text"># 1st Floor, Pandiyalil Building,
+
+                                                Opp My G Showroom, Near Palipaatu Temple,
+
+                                                Piravom P.O
+
+                                                Kochi - 686664</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Partner Offices :</h5>
+                                            <h6>Bangalore:</h6>
+                                            <p class="card-text">#2nd Floor, 15/1, Hosur Main Road,
+
+                                                Siddhartha Colony, Koramangala 2nd Block,
+
+                                                Koramangala,
+
+                                                Bangalore - 560068</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title"></h5>
+                                            <h6>Chennai</h6>
+                                            <p class="card-text">117/2 B, Ambattur OT, Chennai 600053
+
+                                            </p>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title"></h5>
+                                            <h6>Singapore</h6>
+                                            <p class="card-text">1 Raffles place, Tower 2, #20-00 |Singapore, 048616
+
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title"></h5>
+                                            <h6>UAE</h6>
+                                            <p class="card-text">Next to Icelnad Waterpark, Al jazeera al Hamra -
+                                                Ras al khaimah - UAE
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="contact" class="contact-us section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+
+                        <h4> <em>Follow</em> Me </h4>
+                        <div class="line-dec"></div>
+                    </div>
+                </div>
+                <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="contact-dec">
+                                <img src="assets/images/contact-dec-v3.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="row text-center d-flex justify-content-center ">
+                            <div class="col-lg-4">
+                                <div class="row text-center ">
+                                    <div class="col-2 text-center icon"> <a href="https://m.facebook.com/pages/category/Hospitality-Service/150317890480465/"> <i class="fa fa-facebook fa-2x"
+                                            aria-hidden="true"></i></a></div>
+                                    <div class="col-2 text-center icon"><a href="https://www.instagram.com/tripshouse/?hl=en"> <i class="fa fa-instagram fa-2x"
+                                            aria-hidden="true"></i></a></div>
+                                    <div class="col-2 text-center icon"><a href="https://wa.me/+919074582622"> <i class="fa fa-whatsapp fa-2x"
+                                            aria-hidden="true"></i></a></div>
+                                    <div class="col-2 text-center icon"> <a href=""><i class="fa fa-twitter fa-2x"
+                                            aria-hidden="true"></i></a></div>
+                                    <div class="col-2 text-center icon"> <a href=""><i class="fa fa-youtube fa-2x"
+                                            aria-hidden="true"></i></a></div>
+                                    <div class="col-2 text-center icon"> <a href=""><i class="fa fa-google-plus fa-2x"
+                                            aria-hidden="true"></i></a></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+    
+                        <p>Copyright © 2022 Hudels Hospitality Services. All Rights Reserved.
+                           <br> <a href="{% url 'privacy' %}">Privacy & Policy</a> | <a href="{% url 'terms' %}">Terms and Conditions</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <script>
+            setTimeout(function () {
+                $('.loader-bg').fadeToggle();
+            }, 3500);
+        </script>
+
+
+        <!-- Scripts -->
+        <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+        <script src="{% static 'assets/js/animation.js' %}"></script>
+        <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+        <script src="{% static 'assets/js/custom.js' %}"></script>
+
+</body>
+
+</html>
